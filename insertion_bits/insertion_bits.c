@@ -42,7 +42,6 @@ int32_t insertBits(int32_t N, int32_t M, int i, int j) {
     int k = 0;
 
     for (k = i; k <= j; k++) {
-        printBinary(n_cleared);
         clearBit(n_cleared, k);
     }
 
@@ -56,10 +55,6 @@ int main(int argc, char **argv) {
     int32_t M = 0b10011;
     int i = 2;
     int j = 6;
-
-    printBinary(N);
-    printBinary(M);
-    printf("\n\n");
 
     int32_t result = insertBits(N, M, i, j);
 
