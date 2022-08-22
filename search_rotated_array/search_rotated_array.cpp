@@ -13,26 +13,53 @@
 
 using namespace std;
 
-int binarySearch(vector<int> vec, int x) {
-    int low = 0;
-    int high = vec.size() - 1;
-    int mid = 0;
+int search_aux(vector<int> vec, int left, int right, int target) {
+    int vec_size = vec.size();
+    int mid = (left + right) / 2;
 
-    while (low <= high) {
-        mid = low + (high - low) / 2;
+    if (right < left) {
+        return -1;  // Not found
+    }
 
-        if (vec[mid] < x) {
-            low = mid + 1;
-        }
-        else if (vec[mid] > x) {
-            high = mid - 1;
+    if (target == vec[mid]) {
+        return mid; // Found
+    }
+
+    if (vec[left] < vec[mid]) {
+        if (vec[left] <= target && target < vec[mid]) {
+            return search_aux(vec, left, mid - 1, target);
         }
         else {
-            return mid;
+            return search_aux(vec, mid + 1, right, target);
         }
+    }
+    else if (vec[mid] < vec[right]) {
+        if (vec[mid] < target && target <= vec[right]) {
+            return search_aux(vec, mid + 1, right, target);
+        }
+        else {
+            return search_aux(vec, left, mid - 1, target);
+        }
+    }
+    else {
+        int location = -1;
+
+        if (vec[left] == vec[mid]) {
+            location = search_aux(vec, mid + 1, right, target);
+        }
+
+        if (location == -1 && vec[mid] == vec[right]) {
+            location = search_aux(vec, left, mid - 1, target);
+        }
+
+        return location;
     }
 
     return -1;
+}
+
+int search(vector<int> vec, int target) {
+    return search_aux(vec, 0, vec.size() - 1, target);
 }
 
 int main(){
@@ -51,4 +78,6 @@ int main(){
     vec.push_back(7);
     vec.push_back(10);
     vec.push_back(14);
+
+    cout << "The position of 5 in the vector is " << search(vec, 5) << endl;
 }
