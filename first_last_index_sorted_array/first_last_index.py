@@ -15,7 +15,13 @@ Example:
 
 
 class Solution:
+    '''
+    Solution class
+    '''
     def getRange(self, arr, target):
+        '''
+            Gets first and last ocurrences of target in arr.
+        '''
         first = -1
         last = -1
 
@@ -36,8 +42,8 @@ class Solution:
 
 
 # Test program
-arr = [1, 2, 2, 2, 2, 3, 4, 7, 8, 8]
+ar = [1, 2, 2, 2, 2, 3, 4, 7, 8, 8]
 x = 2
 
-print(Solution().getRange(arr, x))
+print(Solution().getRange(ar, x))
 # [1, 4]
