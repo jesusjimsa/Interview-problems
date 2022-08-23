@@ -18,4 +18,4 @@ jobs:
           for FILE in $(git ls-files '*.c'); do gcc $FILE; done
       - name: Compile C++ files
         run: |
-          for FILE in $(git ls-files '*.cpp'); do echo $FILE; done
+          for FILE in $(git ls-files '*.cpp'); do g++ $FILE; done
