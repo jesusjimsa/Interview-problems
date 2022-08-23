@@ -12,7 +12,7 @@ Example:
 # Definition for singly-linked list.
 class ListNode:
     '''
-    ListNode class
+    ListNode classkvjbcpisfbv
     '''
     def __init__(self, x):
         self.val = x
