@@ -8,43 +8,61 @@
 
 using namespace std;
 
-struct MyStackNode {
+class StackNode {
+public:
     int data;
-    MyStackNode *next;
-    int min_so_far = INT_MAX;
+    StackNode* next;
+    int min_so_far;
+
+    StackNode() {
+        min_so_far = INT_MAX;
+    }
 };
 
 class MyStackMin {
     private:
-        MyStackNode *top;
+        StackNode* root;
     public:
-        int pop() {
-            int item = top->data;
-
-            top = top->next;
-
-            // When doing the pop operation, the minimum value will be up to date because we save the min so far value 
-            // every time
-            return item;
+        MyStackMin() {
+            root = new StackNode();
         }
 
-        void push(int item) {
-            MyStackNode *t;
+        int isEmpty() {
+            return !root;
+        }
 
-            // Save the minimun value so far in the stack in the top
-            t->min_so_far = item < top->min_so_far ? item : top->min_so_far;
+        void push(int data) {
+            StackNode* stackNode = new StackNode();
 
-            t->data = item;
-            t->next = top;
-            top = t;
+            stackNode->min_so_far = data < root->min_so_far ? data : root->min_so_far;
+
+            stackNode->data = data;
+            stackNode->next = NULL;
+            stackNode->next = root;
+            root = stackNode;
+        }
+
+        int pop() {
+            if (isEmpty()) {
+                return INT_MIN;
+            }
+
+            StackNode* temp = root;
+            int popped = temp->data;
+
+            root = root->next;
+
+            free(temp);
+
+            return popped;
         }
 
         int min() {
-            return top->min_so_far;
+            return root->min_so_far;
         }
 };
 
-int main () {
+int main() {
     MyStackMin test;
 
     test.push(12);
