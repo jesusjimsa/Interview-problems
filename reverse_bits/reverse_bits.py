@@ -15,14 +15,14 @@ def to_bits(num):
     """
         Translate num to bits.
     """
-    return '{0:032b}'.format(num)
+    return f'{num:032b}'
 
 
 def reverse_num_bits(num):
     """
         Reverse bits in num.
     """
-    return int('{:032b}'.format(num)[::-1], 2)
+    return int(f'{num:032b}'[::-1], 2)
 
 
 print(to_bits(1234))
