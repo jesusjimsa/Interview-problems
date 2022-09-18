@@ -7,3 +7,5 @@ to a director.
 
 1. Design the classes and data structures for this problem.
 2. Implement a method `dispatchCall()` which assigns a call to the first available employee.
+
+Solved in C++.

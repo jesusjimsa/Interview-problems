@@ -26,3 +26,5 @@ print(reverse_num_bits(1234))
 print(to_bits(reverse_num_bits(1234)))
 # 1001011001000000000000000000000
 ```
+
+Solved in Python.
