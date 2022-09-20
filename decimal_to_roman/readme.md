@@ -18,12 +18,12 @@ The value of a roman numeral are the digits added together. For example the roma
 
 There are a couple special exceptions to the above rule.
 
-To represent `4`, we should use `IV` instead of `IIII`. Notice that `I` comes before `V`.
-To represent `9`, we should use `IX` instead of `VIIII`.
-To represent `40`, we should use `XL` instead of `XXXX`.
-To represent `90`, we should use `XC` instead of `LXXXX`.
-To represent `400`, we should use `CD` instead of `CCCC`.
-To represent `900`, we should use `CM` instead of `DCCCC`.
+To represent `4`, we should use `IV` instead of `IIII`. Notice that `I` comes before `V`.  
+To represent `9`, we should use `IX` instead of `VIIII`.  
+To represent `40`, we should use `XL` instead of `XXXX`.  
+To represent `90`, we should use `XC` instead of `LXXXX`.  
+To represent `400`, we should use `CD` instead of `CCCC`.  
+To represent `900`, we should use `CM` instead of `DCCCC`.  
 
 Here are some examples and some starter code.
 
