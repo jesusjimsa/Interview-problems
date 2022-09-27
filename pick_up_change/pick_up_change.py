@@ -5,7 +5,7 @@
 """
 
 
-def max_change(mat):
+def max_change(matrix):
     """
         Return maximum change that can be picked up from the matrix.
 
@@ -18,18 +18,18 @@ def max_change(mat):
     n = 0
     m = 0
 
-    while n < len(mat) and m < len(mat[0]):
-        result += mat[n][m]
+    while n < len(matrix) and m < len(matrix[0]):
+        result += matrix[n][m]
 
-        if n >= len(mat):
+        if n >= len(matrix):
             m += 1
             continue
 
-        if m >= len(mat[0]):
+        if m >= len(matrix[0]):
             n += 1
             continue
 
-        if mat[n + 1][m] > mat[n][m + 1]:
+        if matrix[n + 1][m] > matrix[n][m + 1]:
             n += 1
         else:
             m += 1
