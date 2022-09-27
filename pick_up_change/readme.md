@@ -6,7 +6,7 @@ Here's some starter code:
 
 ```Python
 def max_change(mat):
-  # Fill this in.
+    # Fill this in.
 
 mat = [
     [0, 3, 0, 2],
