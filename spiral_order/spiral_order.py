@@ -11,8 +11,7 @@
     ]
 
     Output: [13, 14, 17, 27, 10, 78, 23, 55, 12, 81, 52, 31]
-"""
-"""
+
     TODO: This is the solution I presented in the interview. It can be improved because this solutiooon would only work
     with a matrix of the same dimensions as the given ones. It should work with every type of matrix.
 """
@@ -46,7 +45,7 @@ def spiral_order(matrix):
         matrix : List(List())
             Matrix to be transformed to spiral form.
     """
-    result = list()
+    result = []
     reversed_last_row = matrix[-1]
     reversed_matrix = list(matrix)
     saved_i = 0
