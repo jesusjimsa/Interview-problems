@@ -8,7 +8,15 @@
 """
 
 
-def URLify(input_str=''):
+def URLify(input_str):
+    """
+    Replace all spaces in a string with `%20`.
+
+    Parameters
+    ----------
+    input_str : str
+        String to URLify.
+    """
     result = input_str.strip()
     result = result.replace(' ', '%20')
 
