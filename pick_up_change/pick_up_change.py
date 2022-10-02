@@ -21,11 +21,11 @@ def max_change(matrix):
     while n < len(matrix) and m < len(matrix[0]):
         result += matrix[n][m]
 
-        if n >= len(matrix):
+        if n >= len(matrix) - 1:
             m += 1
             continue
 
-        if m >= len(matrix[0]):
+        if m >= len(matrix[0]) - 1:
             n += 1
             continue
 
