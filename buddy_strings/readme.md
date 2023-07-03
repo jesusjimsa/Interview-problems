@@ -37,3 +37,5 @@ Explanation: You can swap s[0] = 'a' and s[1] = 'a' to get "aa", which is equal 
 `s` and `goal` consist of lowercase letters.
 
 From [Leetcode](https://leetcode.com/problems/buddy-strings/description/).
+
+Solved in C++.
