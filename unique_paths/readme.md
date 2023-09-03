@@ -7,7 +7,7 @@ Given the two integers `m` and `n`, return _the number of possible unique paths 
 
 The test cases are generated so that the answer will be less than or equal to `2 * 109`.
 
-#### Example 1:
+#### Example 1:
 
 ![Robot image](https://assets.leetcode.com/uploads/2018/10/22/robot_maze.png)
 
