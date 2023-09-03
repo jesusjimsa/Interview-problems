@@ -12,19 +12,19 @@
 
     ![Robot image](https://assets.leetcode.com/uploads/2018/10/22/robot_maze.png)
 
-    > **Input:** `m = 3, n = 7`  
+    > **Input:** `m = 3, n = 7`
     > **Output:** `28`
 
 
     #### Example 2:
 
-    > **Input:** `m = 3, n = 2`  
+    > **Input:** `m = 3, n = 2`
     > **Output:** `3`
     > **Explanation:** `From the top-left corner, there are a total of 3 ways to reach the bottom-right corner:`
     > 1. `Right -> Down -> Down`
     > 2. `Down -> Down -> Right`
     > 3. `Down -> Right -> Down`
-    
+
 
     #### Constraints:
 
@@ -53,7 +53,7 @@ int main(int argc, char const *argv[]) {
     int n = 13;
 
     printf("Results for m = %d; n = %d: %Lf\n", m, n, uniquePaths(m, n));
-    
+
     return 0;
 }
 
