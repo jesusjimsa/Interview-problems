@@ -40,4 +40,46 @@ def solution(N):
     max_gap : Int
         Biggest gap of zeros in `N`.
     '''
-    max_g
+    max_gap = 0
+    current_gap = 0
+
+    if N == 0:
+        return 0
+    
+    binary_string = "{0:b}".format(N)
+
+    if '0' not in binary_string:
+        return 0
+    
+    i = 0
+    
+    while i < len(binary_string):
+        if binary_string[i] == '1' and (i + 1) < len(binary_string) and binary_string[i + 1] == '0':
+            
+            for j in range(i + 1, len(binary_string)):
+                if binary_string[j] == '0':
+                    if j < len(binary_string) - 1:
+                        current_gap += 1
+                    else:
+                        current_gap = 0
+                        i = j
+                        break
+                else:
+                    max_gap = max(max_gap, current_gap)
+                    current_gap = 0
+                    i = j - 1
+                    break
+        
+        i += 1
+    
+    return max_gap
+
+
+print(solution(9))          # 2
+print(solution(1041))       # 5
+print(solution(32))         # 0
+print(solution(529))        # 4
+print(solution(20))         # 1
+print(solution(15))         # 0
+print(solution(2147483))    # 5
+print(solution(328))
