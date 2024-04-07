@@ -29,8 +29,7 @@ def longest_run(n):
         if num_in_binary[i] == '1' and num_in_binary[i + 1] == '1':
             current_consecutive += 1
         else:
-            if current_consecutive > consecutive_max:
-                consecutive_max = current_consecutive
+            consecutive_max = max(consecutive_max, current_consecutive)
 
             current_consecutive = 1
 
