@@ -27,16 +27,17 @@ N is an integer within the range `[1..2,147,483,647]`.
 
 
 def solution(N):
-    if N == 0:
-        return 0
+    '''
+    Find the binary gap of zeros in the binary representation of `N`.
     
-    binary_string = "{0:b}".format(N)
-
-    if '0' not in binary_string:
-        return 0
+    Parameters
+    ----------
+    N : Int
+        Integer to find the binary gap of.
     
-    for i in range(0, len(binary_string)):
-        if binary_string[i] == '0' and binary_string[i + 1] == '0':
-
-
-print(solution(2147483))
+    Returns
+    -------
+    max_gap : Int
+        Biggest gap of zeros in `N`.
+    '''
+    max_g
