@@ -44,12 +44,12 @@ Write an efficient algorithm for the following assumptions:
 def solution(A):
     '''
     Return the number that is left unpaired.
-    
+
     Parameters
     ----------
     A : List
         Array with odd number of elements and one unpaired number.
-    
+
     Returns
     -------
     sol : Int
@@ -58,10 +58,10 @@ def solution(A):
     # Return error if length is not correct or if array is empty
     if len(A) % 2 == 0 or not A:
         return -1
-    
+
     already_checked = []
     sol = -1
-    
+
     for number in A:
         if number in already_checked:
             pass
@@ -70,31 +70,31 @@ def solution(A):
             break
         else:
             already_checked.append(number)
-    
+
     return sol
 
 
 def optimal_solution(A):
     '''
     Return the number that is left unpaired.
-    
+
     This solution was found online after my own solution failed to run before the timeout in some test cases.
-    
+
     Parameters
     ----------
     A : List
         Array with odd number of elements and one unpaired number.
-    
+
     Returns
     -------
     result : Int
         Unpaired number in `A`.
     '''
     result = 0
-    
+
     for number in A:
         result ^= number
-    
+
     return result
 
 print(solution([9, 3, 9, 3, 9, 7, 9]))
