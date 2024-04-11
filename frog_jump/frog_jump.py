@@ -34,11 +34,24 @@ Write an efficient algorithm for the following assumptions:
 '''
 
 def solution(X, Y, D):
+    '''
+    Count the minimal number of jumps that the frog must perform to reach its target.
+
+    Parameters
+    ----------
+    X : Int
+        Initial position.
+    Y : Int
+        Final position.
+    D : Int
+        Distance of each jump.
+    '''
     jumps =  int((Y - X) / D)
 
     if (Y - X) % D != 0:
         jumps += 1
 
     return jumps
+
 
 print(solution(10, 85, 30))
