@@ -25,7 +25,7 @@ Output: 21
 
 ## Constraints:
 
-* `-231 <= x <= 231 - 1`
+* `-2^31 <= x <= 2^31 - 1`
 
 Solved in C.
 
