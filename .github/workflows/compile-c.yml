@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Compile C files
         run: |
-          for FILE in $(git ls-files '*.c'); do gcc $FILE -Werror; done
+          for FILE in $(git ls-files '*.c'); do gcc $FILE -Werror -Wall; done
 
   build_cpp:
     runs-on: macos-latest
@@ -24,4 +24,4 @@ jobs:
       - uses: actions/checkout@v4
       - name: Compile C++ files
         run: |
-          for FILE in $(git ls-files '*.cpp'); do g++ -std=c++11 $FILE -Werror; done
+          for FILE in $(git ls-files '*.cpp'); do g++ -std=c++11 $FILE -Werror -Wall; done
