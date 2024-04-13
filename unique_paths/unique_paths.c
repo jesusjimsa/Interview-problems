@@ -52,7 +52,7 @@ int main(int argc, char const *argv[]) {
     int m = 19;
     int n = 13;
 
-    printf("Results for m = %d; n = %d: %Lf\n", m, n, uniquePaths(m, n));
+    printf("Results for m = %d; n = %d: %d\n", m, n, uniquePaths(m, n));
 
     return 0;
 }
