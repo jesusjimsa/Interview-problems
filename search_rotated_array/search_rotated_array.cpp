@@ -14,7 +14,6 @@
 using namespace std;
 
 int search_aux(vector<int> vec, int left, int right, int target) {
-    int vec_size = vec.size();
     int mid = (left + right) / 2;
 
     if (right < left) {
@@ -64,7 +63,6 @@ int search(vector<int> vec, int target) {
 
 int main(){
     vector <int> vec;
-    int result = 0;
 
     vec.push_back(15);
     vec.push_back(16);

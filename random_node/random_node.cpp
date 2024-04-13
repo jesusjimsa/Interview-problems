@@ -21,8 +21,8 @@ struct BSTNode {
 class BST {
     private:
         int data;
-        struct BST *left;
-        struct BST *right;
+        BST *left;
+        BST *right;
 
         BST* continueRandomNode(BST* root, int num_steps) {
             int rand_lr = rand() % 1;
@@ -32,8 +32,6 @@ class BST {
             }
 
             if (root->left != NULL && root->right != NULL) {
-                int rand_lr = rand() % 1;
-
                 if (rand_lr == 0) {
                     return continueRandomNode(root->left, num_steps - 1);
                 }
