@@ -89,6 +89,11 @@ int main(int argc, char const *argv[]) {
 
     printf("%d\n", sumOfLeftLeaves(tree));
 
+    if (tree) {
+        free(tree);
+        tree = NULL;
+    }
+
     return 0;
 }
 
