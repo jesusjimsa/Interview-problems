@@ -84,7 +84,7 @@ def solution(A):
         Minimal difference.
     '''
     all_diffs = []
-    
+
     if len(A) == 1:
         return A[0]
     elif len(A) == 2:
