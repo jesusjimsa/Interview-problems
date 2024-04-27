@@ -64,6 +64,21 @@
 
 
 def solution(N, A):
+    '''
+    Calculate every counter according to the operations given by the elements in the array A.
+
+    Parameters
+    ----------
+    N : Integer
+        Number of counters.
+    A : List
+        List holding operations based on the value of its elements.
+
+    Returns
+    -------
+    counter : List
+        List of counters calculated.
+    '''
     counter = [0] * N   # Initialize a list with N counters set to 0
     last_max = 0
 
