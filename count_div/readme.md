@@ -21,9 +21,3 @@ Write an efficient algorithm for the following assumptions:
 Solved in Python.
 
 From [Codility](https://app.codility.com/programmers/lessons/5-prefix_sums/count_div/).
-
-
-
-
-
-0, 2000000000, 2
