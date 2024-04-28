@@ -48,7 +48,7 @@ uno = [1, 3, 6, 4, 1, 2]
 dos = [1, 2, 3]
 tres = [-1, -3]
 
-cuatro = list()
+cuatro = []
 
 for i in range(1, 100001):
     cuatro.append(i)
