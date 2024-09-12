@@ -22,8 +22,6 @@ int minIncrementForUnique(int* nums, int numsSize) {
     qsort(nums, numsSize, sizeof(int), compare);
 
     for (i = 1; i < numsSize; i++) {
-        int uno = nums[i - 1];
-        int dos = nums[i];
         /*
             The following solution works, however, it takes too long when the array is very big with very big numbers.
             the solution inside this comment would fix it:
