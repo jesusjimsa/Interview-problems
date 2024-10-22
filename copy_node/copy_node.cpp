@@ -24,10 +24,6 @@ struct Node {
     }
 
     Node* copy_node() {
-        if (!this) {
-            return nullptr;
-        }
-
         Node* new_node = new Node(this->data);
 
         new_node->left = this->left ? this->left->copy_node() : nullptr;
