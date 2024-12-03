@@ -61,7 +61,7 @@ Output: 2
 Explanation:
 
 We can remove source[2] and source[3] in two operations.
-``` 
+```
 
 ## Constraints:
 
@@ -78,12 +78,28 @@ from typing import List
 
 
 class Solution:
+    """
+    A class providing methods to remove characters from a source string
+    while maintaining a specific pattern.
+    """
     def maxRemovals(self, source: str, pattern: str, targetIndices: List[int]) -> int:
+        """
+        Calculate the maximum number of removals while preserving the pattern.
+
+        Args:
+            source (str): The original source string.
+            pattern (str): The pattern to be preserved.
+            targetIndices (List[int]): Indices of characters that can be removed.
+
+        Returns:
+            int: Maximum number of characters that can be removed while
+                 keeping the pattern intact.
+        """
         result = 0
-        
+
         for idx in targetIndices:
             local_source = source[:idx] + '_' + source[idx+1:]
-            
+
             if pattern in local_source.replace('_', ''):
                 result += 1
                 source = local_source
