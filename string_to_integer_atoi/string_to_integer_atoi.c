@@ -124,7 +124,6 @@ int myAtoi(char* s) {
     bool first_num = true;
     int s_len = strlen(s);
     long long result = 0;
-    int num = 0;
     int multiply = 1;
     int i = 0;
 
@@ -150,8 +149,6 @@ int myAtoi(char* s) {
         }
 
         if (is_number(s[i])) {
-            num = s[i] - '0';
-
             if (result * multiply > INT_MAX) {    // Overflow
                 return is_negative ? INT_MIN : INT_MAX;
             }
