@@ -87,3 +87,7 @@ struct ListNode* insertGreatestCommonDivisors(struct ListNode* head) {
 
     return head;
 }
+
+int main(int argc, char const *argv[]) {
+    return 0;
+}
