@@ -45,7 +45,6 @@ int findContentChildren(int* g, int gSize, int* s, int sSize) {
     int cookies_given = 0;
     int next_available_cookie = 0;
     int i = 0;
-    int j = 0;
 
     if (gSize == 0 || sSize == 0) {
         return 0;
@@ -74,12 +73,12 @@ int main(int argc, char const *argv[]) {
     int greed[] = {1, 2, 3};
     int cookies[] = {1, 1};
 
-    printf("Cookies given: %d\n", findContentChildren(&greed, 3, &cookies, 2));
+    printf("Cookies given: %d\n", findContentChildren(greed, 3, cookies, 2));
     
     int greed2[] = {1, 2};
     int cookies2[] = {1, 2, 3};
 
-    printf("Cookies given: %d\n", findContentChildren(&greed2, 2, &cookies2, 3));
+    printf("Cookies given: %d\n", findContentChildren(greed2, 2, cookies2, 3));
 
     return 0;
 }
