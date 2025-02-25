@@ -53,7 +53,6 @@ int* sortedSquares(int* nums, int numsSize, int* returnSize) {
 }
 
 int* sortedSquaresFast(int* nums, int numsSize, int* returnSize) {
-    int i = 0;
     int *solution = (int*)malloc(numsSize * sizeof(int));
     int left = 0;
     int right = numsSize - 1;
