@@ -18,7 +18,29 @@ on:
       - '**.hpp'
 
 jobs:
+  check_file_changes:
+    runs-on: ubuntu-latest
+    outputs:
+      c_changed: ${{ steps.filter.outputs.c }}
+      cpp_changed: ${{ steps.filter.outputs.cpp }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: dorny/paths-filter@v2
+        id: filter
+        with:
+          filters: |
+            c:
+              - '**.c'
+              - '**.h'
+            cpp:
+              - '**.cpp'
+              - '**.hpp'
+
   build_c:
+    needs: check_file_changes
+    if: ${{ needs.check_file_changes.outputs.c_changed == 'true' }}
     runs-on: macos-latest
 
     steps:
@@ -28,6 +50,8 @@ jobs:
           for FILE in $(git ls-files '*.c'); do gcc $FILE -Werror -Wall; done
 
   build_cpp:
+    needs: check_file_changes
+    if: ${{ needs.check_file_changes.outputs.cpp_changed == 'true' }}
     runs-on: macos-latest
 
     steps:
