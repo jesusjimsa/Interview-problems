@@ -77,7 +77,6 @@ public:
         }
 
         int maxLength = 0;
-        int previousValue = -1;
 
         for (int target = 0; target < k; target++) {
             for (int r1 = 0; r1 < k; r1++) {
